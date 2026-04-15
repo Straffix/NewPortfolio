@@ -1,0 +1,183 @@
+// Jasna paleta strony
+// Ten plik zachowuje ten sam zestaw tokenow co _colors.scss,
+// dzieki czemu mozna go podmienic 1:1 w importach.
+
+// Bazowa paleta strony
+$bg-main: #f7efe7; // Glowne tlo strony
+$bg-soft: #efe3d7; // Ciemniejsze wypelnienia i glebia tla
+$panel-base: rgba(255, 250, 245, 0.9); // Szklane panele i warstwy pomocnicze
+$panel-border: rgba(213, 147, 106, 0.22); // Delikatne obramowania paneli
+$text-main: #2f1d16; // Podstawowy kolor tekstu
+$text-soft: rgba(64, 40, 29, 0.72); // Akapity i dluzsze opisy
+$text-faint: rgba(92, 64, 49, 0.48); // Drobne podpisy i opisy pomocnicze
+$accent-main: #ef8f56; // Glowne cieple akcenty marki
+$accent-main-strong: #e5793e; // Mocniejszy wariant glownego akcentu
+$accent-main-soft: rgba(239, 143, 86, 0.14); // Lekka poswiata pomaranczu
+$line-soft: rgba(102, 72, 57, 0.1); // Cienkie linie i delikatne refleksy
+
+// Neutralne kolory pomocnicze
+$transparent: transparent; // Uzywany w gradientach i nakladkach
+$black: #000; // Pelna czern
+$white: #fff; // Pelna biel
+$black-02: rgba(0, 0, 0, 0.02); // Najsubtelniejsze przyciemnienie
+$black-06: rgba(0, 0, 0, 0.04); // Delikatna szyba lub cien
+$black-08: rgba(0, 0, 0, 0.06); // Nieco mocniejsze przyciemnienie
+$black-18: rgba(0, 0, 0, 0.1); // Standardowy cien elementow
+$black-30: rgba(0, 0, 0, 0.14); // Ciezszy cien pod platforma
+$black-36: rgba(0, 0, 0, 0.16); // Cien pod tabletem
+$black-38: rgba(0, 0, 0, 0.18); // Glowny cien bryl
+$black-40: rgba(0, 0, 0, 0.2); // Mocniejszy drop-shadow laptopa
+$black-42: rgba(0, 0, 0, 0.22); // Najglebsze cienie pod obiektami
+$warm-shadow-color: rgba(103, 67, 45, 0.14); // Cien z cieplym brazowym tonem
+$white-02: rgba(255, 255, 255, 0.18); // Delikatna szklista warstwa
+$white-03: rgba(255, 255, 255, 0.24); // Drobny szum i tekstury
+$white-035: rgba(255, 255, 255, 0.32); // Lekki blik na kartach
+$white-04: rgba(255, 255, 255, 0.36); // Obramowania i wewnetrzne refleksy
+$white-045: rgba(255, 255, 255, 0.42); // Miekkie swiatlo na tle
+$white-05: rgba(255, 255, 255, 0.48); // Delikatne obramowania ekranow
+$white-06: rgba(255, 255, 255, 0.56); // Lekki highlight na elementach
+$white-08: rgba(255, 255, 255, 0.64); // Szum tla, linie i refleksy
+$white-10: rgba(255, 255, 255, 0.72); // Wyrazniejszy wewnetrzny blik
+$white-12: rgba(255, 255, 255, 0.78); // Separatory i kreski
+$white-16: rgba(255, 255, 255, 0.84); // Jasne badge i chipy
+$white-18: rgba(255, 255, 255, 0.9); // Ramki chipow i bliki CTA
+$white-32: rgba(255, 255, 255, 0.96); // Najjasniejsza smuga swiatla
+$white-90: rgba(255, 255, 255, 0.94); // Prawie pelna biel
+
+// Tokeny cieni zbudowane z powyzszych kolorow
+$shadow-elevated: 0 24px 60px $black-18;
+$shadow-soft: 0 18px 40px $warm-shadow-color;
+
+// Tlo strony i header
+$body-glow-left: rgba(247, 202, 161, 0.38); // Lewa ciepla poswiata body
+$body-glow-right: rgba(240, 160, 116, 0.22); // Prawa poswiata w tle
+$body-gradient-start: #fffaf5; // Poczatkowy stop body
+$body-gradient-mid: #f7eee5; // Srodkowy stop body
+$body-gradient-end: #efe2d5; // Koncowy stop body
+$body-overlay-gloss: $white-045; // Delikatny szklisty blik na calej stronie
+$body-overlay-warm: rgba(244, 180, 137, 0.16); // Ciepla mgielka nad tlem
+$body-overlay-light: rgba(255, 255, 255, 0.26); // Jasny refleks w dolnej czesci
+$brand-text: rgba(45, 27, 20, 0.96); // Jasne litery logotypu
+$brand-accent: #ec8b50; // Pomaranczowa litera logotypu
+$nav-link: rgba(66, 43, 32, 0.82); // Linki nawigacji w spoczynku
+$nav-underline-start: rgba(255, 192, 122, 0.28); // Start kreski aktywnej zakladki
+$nav-underline-end: rgb(239, 149, 83); // Koniec kreski aktywnej zakladki
+$nav-underline-glow: rgba(239, 149, 83, 0.28); // Poswiata pod aktywna zakladka
+
+// Hero
+$hero-eyebrow: #cf7a33; // Maly naglowek nad hero
+$hero-title-start: #ffbf73; // Start gradientu glownego hasla i CTA
+$hero-title-end: #ef7f51; // Koniec gradientu glownego hasla i CTA
+$button-border: rgba(227, 150, 102, 0.28); // Obramowanie przyciskow
+$button-shadow: rgba(239, 143, 86, 0.18); // Cien glownym CTA
+$button-shadow-hover: rgba(231, 125, 67, 0.24); // Cien CTA po hoverze
+$button-ghost-bg: rgba(255, 252, 249, 0.72); // Tlo przycisku ghost
+$button-ghost-outline: rgba(223, 154, 118, 0.16); // Delikatny ring ghosta
+$button-ghost-hover-border: rgba(227, 151, 111, 0.34); // Obramowanie ghosta po hoverze
+$button-ghost-hover-bg: rgba(248, 236, 227, 0.96); // Tlo ghosta po hoverze
+$stat-icon: #e88549; // Ikony w sekcji statystyk
+$stat-label: rgba(102, 72, 57, 0.62); // Podpisy pod liczbami
+$hero-art-glow-left: rgba(255, 207, 124, 0.28); // Lewa zlota poswiata ilustracji
+$hero-art-glow-right: rgba(242, 156, 104, 0.22); // Prawa pomaranczowa poswiata ilustracji
+$phone-notch: rgba(13, 15, 22, 0.94); // Ciemny notch telefonu
+$hero-code: rgba(235, 238, 255, 0.92); // Kod wyswietlany na ekranach hero
+$hero-backlight-left: rgba(111, 143, 255, 0.2); // Niebieska poswiata po lewej
+$hero-backlight-right: rgba(176, 133, 255, 0.18); // Fioletowa poswiata po prawej
+
+// Sekcja About
+$about-section-glow: rgba(242, 163, 111, 0.18); // Miekka poswiata za sekcja
+$about-title-start: #f5c791; // Jasny start gradientu tytulu About
+$about-title-end: #e98d4b; // Koniec gradientu tytulu About
+$about-intro: rgba(45, 28, 20, 0.94); // Wiekszy lead pod tytulem
+$about-intro-accent: #e7854a; // Akcentowane slowa we wstepie
+$about-card-border: rgba(218, 159, 120, 0.18); // Ramka kart About
+$about-card-bg-start: rgba(255, 251, 247, 0.96); // Gorny stop tla kart
+$about-card-bg-end: rgba(246, 236, 227, 0.92); // Dolny stop tla kart
+$about-card-shine: rgba(255, 255, 255, 0.34); // Delikatny blik na karcie
+$about-card-spotlight: rgba(244, 170, 119, 0.16); // Cieply refleks w rogu karty
+$about-icon-bg: rgba(244, 149, 86, 0.12); // Tlo ikon w kartach
+$about-icon-ring: rgba(226, 156, 112, 0.2); // Obramowanie ikon
+$about-icon: #df7f43; // Sam kolor ikon
+$about-cta-bg-start: rgba(255, 247, 240, 0.98); // Gora karty CTA
+$about-cta-bg-end: rgba(245, 231, 220, 0.96); // Dol karty CTA
+$about-cta-glow: rgba(241, 152, 95, 0.18); // Poswiata za karta CTA
+$portrait-halo-strong: rgba(244, 154, 86, 0.34); // Glowna aura za portretem
+$portrait-halo-soft: rgba(244, 154, 86, 0.08); // Rozmycie glowniejszej aury
+$portrait-halo-small: rgba(244, 171, 106, 0.16); // Dolna mniejsza aura
+$portrait-frame-border: rgba(230, 153, 95, 0.28); // Ramka wokol portretu
+$portrait-frame-glow: rgba(237, 142, 76, 0.12); // Pomaranczowy glow na ramce
+$portrait-frame-inner: rgba(255, 255, 255, 0.42); // Delikatny jasny ring wewnatrz ramki
+$portrait-panel-start: rgba(255, 250, 246, 0.98); // Gora panelu pod zdjeciem
+$portrait-panel-end: rgba(243, 233, 225, 0.98); // Dol panelu pod zdjeciem
+$portrait-panel-glow-center: rgba(255, 186, 133, 0.72); // Centralne swiatlo za postacia
+$portrait-panel-glow-edge: rgba(242, 147, 89, 0.16); // Krawedz glowu za postacia
+$portrait-dust-strong: rgba(232, 166, 116, 0.22); // Najjasniejsze drobinki swiatla
+$portrait-dust-medium: rgba(232, 166, 116, 0.18); // Srednia moc drobinek
+$portrait-dust-soft: rgba(232, 166, 116, 0.12); // Subtelne drobinki
+$portrait-dust-mid-soft: rgba(232, 166, 116, 0.16); // Drobinka miedzy soft a medium
+$portrait-dust-faint: rgba(232, 166, 116, 0.1); // Najslabsze drobinki
+$tech-badge-border: rgba(155, 167, 226, 0.18); // Obramowanie technologicznych badgey
+$tech-badge-start: rgba(250, 252, 255, 0.96); // Gora badgey tech
+$tech-badge-end: rgba(235, 240, 250, 0.9); // Dol badgey tech
+$tech-badge-text: rgba(55, 61, 90, 0.92); // Jasny tekst w badgeach
+$tech-react: #61dafb; // Kolor ikonki React
+$tech-ts-start: #ff9a35; // Start gradientu kostki TS
+$tech-ts-end: #d4691f; // Koniec gradientu kostki TS
+$tech-label-muted: rgba(104, 74, 59, 0.72); // Mniejszy podpis pod nazwa technologii
+
+// Scena 3D i urzadzenia
+$scene-orb-left-core: rgba(255, 184, 122, 0.36); // Najjasniejsze centrum lewej orbity
+$scene-orb-left-mid: rgba(244, 154, 91, 0.54); // Glowny kolor lewej orbity
+$scene-orb-left-tail: rgba(167, 121, 92, 0.06); // Wygaszenie lewej orbity
+$scene-orb-left-shadow: rgba(244, 154, 91, 0.18); // Aura lewej orbity
+$scene-orb-right-core: rgba(255, 201, 136, 0.28); // Centrum prawej orbity
+$scene-orb-right-mid: rgba(244, 173, 95, 0.5); // Glowny kolor prawej orbity
+$scene-orb-right-tail: rgba(173, 132, 97, 0.06); // Wygaszenie prawej orbity
+$scene-orb-right-shadow: rgba(244, 166, 92, 0.2); // Aura prawej orbity
+$scene-platform-top: rgba(255, 255, 255, 0.78); // Gora platformy pod urzadzeniami
+$scene-platform-mid: rgba(244, 232, 222, 0.96); // Srodkowy stop platformy
+$scene-platform-end: rgb(226, 208, 196); // Najciemniejszy stop platformy
+$scene-platform-beam: $white-32; // Jasna linia na gornej krawedzi platformy
+$laptop-content-start: rgba(251, 247, 242, 0.98); // Gora obudowy laptopa
+$laptop-content-end: rgba(233, 221, 212, 0.98); // Dol obudowy laptopa
+$laptop-content-corner: rgba(247, 171, 119, 0.14); // Cieply blik w rogu laptopa
+$screen-start: rgba(36, 28, 25, 0.96); // Gora glownego ekranu
+$screen-end: rgba(18, 14, 13, 0.98); // Dol glownego ekranu
+$screen-corner: rgba(255, 165, 116, 0.12); // Refleks rogu na ekranie
+$code-gutter: rgba(168, 174, 206, 0.68); // Numery linii w edytorze
+$code-main: rgba(255, 241, 228, 0.9); // Tresc kodu na ekranie
+$token-white: rgba(241, 244, 255, 0.92); // Neutralny token kodu
+$token-blue: #8bb2ff; // Token atrybutow
+$token-purple: #bf95ff; // Token nazw lub slow kluczowych
+$token-yellow: #f2d78c; // Token znacznikow
+$token-green: #79dcb5; // Token dodatnich wartosci
+$token-red: #e798b2; // Token ostrzegawczy / stringi kontrastowe
+$token-orange: #f2bb7a; // Token stringow i akcentow
+$project-tablet-shadow: $black-38; // Cien calego tabletu
+$project-tablet-floor-shadow: $black-36; // Cien pod tabletem
+
+// Karta projektu i preview
+$project-card-start: rgba(255, 250, 246, 0.98); // Gora karty projektu
+$project-card-end: rgba(244, 234, 225, 0.98); // Dol karty projektu
+$project-card-ring: rgba(214, 152, 121, 0.12); // Wewnetrzny ring karty
+$project-number: rgba(102, 72, 57, 0.66); // Numer projektu
+$project-actions: rgba(83, 57, 45, 0.72); // Ikony akcji na karcie
+$project-preview-top: rgba(255, 177, 129, 0.16); // Gora tla miniatury
+$project-preview-bottom: rgba(244, 147, 85, 0.24); // Dol tla miniatury
+$project-preview-light: rgba(255, 220, 196, 0.22); // Cieple swiatlo w miniaturze
+$project-preview-base: rgba(227, 195, 171, 0.92); // Brazowa baza miniatury
+$project-preview-end: rgb(205, 172, 147); // Najciemniejszy stop miniatury
+$project-preview-overlay-end: rgba(241, 151, 88, 0.22); // Cieply overlay miniatury
+$project-preview-overlay-light: rgba(255, 239, 225, 0.3); // Dodatkowy refleks miniatury
+$project-preview-grid-start: rgba(118, 139, 219, 0.12); // Start chlodnej siatki miniatury
+$project-preview-grid-end: rgba(92, 110, 187, 0.22); // Koniec chlodnej siatki miniatury
+$project-preview-spotlight: rgba(255, 176, 132, 0.3); // Jasna plama na miniaturze
+$project-preview-fade: rgba(171, 121, 88, 0.34); // Przyciemnienie dolu miniatury
+$project-pagination: rgba(169, 132, 108, 0.26); // Nieaktywne kropki paginacji
+$project-pagination-active-start: #ee9556; // Start aktywnej kropki
+$project-pagination-active-end: #e67844; // Koniec aktywnej kropki
+
+// Scroll indicator
+$scroll-indicator: rgba(88, 61, 47, 0.64); // Glowny kolor wskaznika scrolla
+$scroll-mouse-border: rgba(121, 84, 66, 0.42); // Ramka ikonki myszki
+$scroll-text: rgba(118, 84, 67, 0.6); // Podpis pod wskaznikiem scrolla

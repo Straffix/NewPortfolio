@@ -1,0 +1,551 @@
+@use '_colors-light' as light;
+
+html[data-theme='light'] {
+	color-scheme: light;
+	scrollbar-color: light.$accent-main rgba(188, 157, 134, 0.24);
+}
+
+html[data-theme='light']::-webkit-scrollbar-track {
+	background: rgba(176, 141, 116, 0.14);
+}
+
+html[data-theme='light']::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, light.$accent-main 0%, light.$accent-main-strong 100%);
+	border: 2px solid rgba(255, 249, 243, 0.86);
+}
+
+html[data-theme='light']::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(180deg, #f7a567 0%, light.$accent-main 100%);
+}
+
+html[data-theme='light'] body {
+	color: light.$text-main;
+	background:
+		radial-gradient(circle at 12% 88%, rgba(247, 202, 161, 0.34), light.$transparent 24%),
+		radial-gradient(circle at 82% 20%, rgba(240, 160, 116, 0.18), light.$transparent 28%),
+		linear-gradient(180deg, light.$body-gradient-start 0%, light.$body-gradient-mid 54%, light.$body-gradient-end 100%);
+	background-color: light.$bg-main;
+}
+
+html[data-theme='light'] body::before {
+	background:
+		linear-gradient(115deg, light.$body-overlay-gloss, light.$transparent 30%),
+		radial-gradient(circle at 78% 49%, light.$body-overlay-warm, light.$transparent 24%),
+		radial-gradient(circle at 10% 90%, light.$body-overlay-light, light.$transparent 22%);
+	opacity: 1;
+}
+
+html[data-theme='light'] .page-shell__noise {
+	background-image: radial-gradient(circle, rgba(170, 126, 97, 0.18) 0.7px, light.$transparent 0.9px);
+	opacity: 0.22;
+}
+
+html[data-theme='light'] ::selection {
+	background: rgba(239, 143, 86, 0.22);
+	color: light.$text-main;
+}
+
+html[data-theme='light'] .site-header::before {
+	background: linear-gradient(
+		180deg,
+		rgba(68, 42, 31, calc(0.56 + (0.18 * var(--site-header-scroll-progress)))),
+		rgba(36, 23, 17, calc(0.5 + (0.2 * var(--site-header-scroll-progress))))
+	);
+	box-shadow: 0
+		calc(16px - (4px * var(--site-header-scroll-progress)))
+		calc(36px - (8px * var(--site-header-scroll-progress)))
+		rgba(78, 52, 37, calc(0.12 + (0.06 * var(--site-header-scroll-progress))));
+}
+
+html[data-theme='light'] .site-header::after {
+	background: linear-gradient(90deg, light.$transparent, rgba(255, 211, 151, 0.78), rgba(239, 143, 86, 0.9), light.$transparent);
+}
+
+html[data-theme='light'] body.header-is-detached .site-header::before {
+	background: linear-gradient(180deg, light.$header-shell-strong-start, light.$header-shell-end);
+}
+
+html[data-theme='light'] body.header-is-shrunk .site-header::before {
+	background: linear-gradient(180deg, light.$header-shell-strong-start, light.$header-shell-strong-end);
+	box-shadow: 0 12px 28px rgba(78, 52, 37, 0.18);
+}
+
+html[data-theme='light'] .brand__logo {
+	filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.18));
+}
+
+html[data-theme='light'] .site-nav__link {
+	color: rgba(255, 247, 241, 0.8);
+}
+
+html[data-theme='light'] .site-nav__link:hover,
+html[data-theme='light'] .site-nav__link:focus-visible,
+html[data-theme='light'] .site-nav__link--active {
+	color: rgba(255, 255, 255, 0.98);
+}
+
+html[data-theme='light'] .theme-toggle {
+	border-color: light.$toggle-track-border;
+	background: linear-gradient(180deg, light.$toggle-track-start, light.$toggle-track-end);
+	box-shadow:
+		0 14px 28px rgba(103, 67, 45, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.7);
+	color: light.$toggle-icon-muted;
+}
+
+html[data-theme='light'] .theme-toggle:hover,
+html[data-theme='light'] .theme-toggle:focus-visible {
+	border-color: rgba(226, 156, 112, 0.34);
+	box-shadow:
+		0 16px 32px rgba(103, 67, 45, 0.14),
+		inset 0 1px 0 rgba(255, 255, 255, 0.84);
+}
+
+html[data-theme='light'] .theme-toggle__thumb {
+	background: linear-gradient(180deg, light.$toggle-thumb-start, light.$toggle-thumb-end);
+	box-shadow:
+		0 10px 20px rgba(103, 67, 45, 0.16),
+		inset 0 1px 0 rgba(255, 252, 248, 0.88);
+}
+
+html[data-theme='light'] .hero::before {
+	background: radial-gradient(
+		circle 260px at var(--hero-pointer-x) var(--hero-pointer-y),
+		rgba(255, 230, 203, 0.36) 0%,
+		rgba(244, 181, 132, 0.2) 34%,
+		rgba(239, 143, 86, 0.1) 58%,
+		light.$transparent 100%
+	);
+}
+
+html[data-theme='light'] .hero__backdrop::after {
+	background:
+		linear-gradient(
+			90deg,
+			rgba(255, 249, 243, 0.86) 0%,
+			rgba(255, 249, 243, 0.58) 34%,
+			rgba(255, 249, 243, 0.16) 60%,
+			rgba(255, 244, 237, 0.48) 100%
+		),
+		linear-gradient(
+			180deg,
+			rgba(255, 246, 239, 0.22) 0%,
+			rgba(255, 246, 239, 0.04) 30%,
+			rgba(255, 241, 232, 0.12) 58%,
+			rgba(255, 241, 232, 0.04) 78%,
+			rgba(255, 241, 232, 0) 100%
+		);
+}
+
+html[data-theme='light'] .hero__backdrop-image {
+	opacity: 0.38;
+	filter: saturate(0.82) brightness(1.02) contrast(0.88);
+}
+
+html[data-theme='light'] .eyebrow {
+	color: light.$hero-eyebrow;
+}
+
+html[data-theme='light'] .hero__title-accent,
+html[data-theme='light'] .contact-section__title-accent {
+	background: linear-gradient(90deg, light.$hero-title-start 0%, light.$hero-title-end 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+html[data-theme='light'] .button {
+	border-color: rgba(227, 150, 102, 0.24);
+}
+
+html[data-theme='light'] .button--primary {
+	background: linear-gradient(90deg, light.$hero-title-start 0%, light.$hero-title-end 100%);
+	box-shadow:
+		0 16px 32px rgba(239, 143, 86, 0.16),
+		inset 0 1px 0 rgba(255, 252, 248, 0.48);
+}
+
+html[data-theme='light'] .button--primary:hover,
+html[data-theme='light'] .button--primary:focus-visible {
+	border-color: rgba(227, 151, 111, 0.34);
+	box-shadow:
+		0 18px 34px rgba(231, 125, 67, 0.22),
+		inset 0 1px 0 rgba(255, 252, 248, 0.64);
+}
+
+html[data-theme='light'] .button--ghost {
+	background: rgba(255, 251, 247, 0.84);
+	box-shadow: inset 0 0 0 1px rgba(223, 154, 118, 0.16);
+	color: light.$text-main;
+}
+
+html[data-theme='light'] .button--ghost:hover,
+html[data-theme='light'] .button--ghost:focus-visible {
+	background: rgba(248, 236, 227, 0.96);
+	border-color: rgba(227, 151, 111, 0.34);
+}
+
+html[data-theme='light'] .stat {
+	border-right-color: rgba(121, 84, 66, 0.14);
+}
+
+html[data-theme='light'] .stat__icon {
+	color: light.$stat-icon;
+}
+
+html[data-theme='light'] .stat__body span {
+	color: light.$stat-label;
+}
+
+html[data-theme='light'] .scroll-indicator {
+	color: light.$scroll-indicator;
+}
+
+html[data-theme='light'] .scroll-indicator__mouse {
+	border-color: light.$scroll-mouse-border;
+}
+
+html[data-theme='light'] .scroll-indicator__mouse span {
+	background: light.$accent-main;
+}
+
+html[data-theme='light'] .scroll-indicator span {
+	color: light.$scroll-text;
+}
+
+html[data-theme='light'] .projects-showcase__lead,
+html[data-theme='light'] .projects-archive__header p,
+html[data-theme='light'] .featured-project__text,
+html[data-theme='light'] .project-tile__body p,
+html[data-theme='light'] .about-section__lead,
+html[data-theme='light'] .about-card__text,
+html[data-theme='light'] .contact-link-card__content span,
+html[data-theme='light'] .contact-section__availability,
+html[data-theme='light'] .contact-form__feedback {
+	color: light.$text-soft;
+}
+
+html[data-theme='light'] .projects-showcase__title::first-letter,
+html[data-theme='light'] .about-section__title-accent {
+	background: linear-gradient(180deg, light.$about-title-start 0%, light.$about-title-end 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+html[data-theme='light'] .featured-project,
+html[data-theme='light'] .project-tile,
+html[data-theme='light'] .about-card,
+html[data-theme='light'] .contact-link-card,
+html[data-theme='light'] .contact-section__panel {
+	border-color: rgba(218, 159, 120, 0.18);
+	box-shadow:
+		0 20px 44px rgba(103, 67, 45, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+html[data-theme='light'] .featured-project {
+	background:
+		linear-gradient(180deg, rgba(255, 251, 247, 0.98), rgba(246, 236, 227, 0.92)),
+		radial-gradient(circle at 78% 22%, rgba(244, 170, 119, 0.16), light.$transparent 22%);
+}
+
+html[data-theme='light'] .featured-project::before,
+html[data-theme='light'] .project-tile::before {
+	background: linear-gradient(90deg, light.$transparent, rgba(239, 163, 107, 0.66), light.$transparent);
+}
+
+html[data-theme='light'] .featured-project::after {
+	background: radial-gradient(circle, rgba(244, 154, 91, 0.16), light.$transparent 68%);
+}
+
+html[data-theme='light'] .featured-project__eyebrow,
+html[data-theme='light'] .projects-showcase__signature {
+	color: rgba(126, 78, 52, 0.84);
+}
+
+html[data-theme='light'] .featured-project__tags li,
+html[data-theme='light'] .project-tile__tags li,
+html[data-theme='light'] .projects-filter {
+	border-color: rgba(214, 152, 121, 0.18);
+	background: rgba(255, 255, 255, 0.38);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+	color: rgba(92, 64, 49, 0.76);
+}
+
+html[data-theme='light'] .featured-project__button,
+html[data-theme='light'] .featured-project__button--github,
+html[data-theme='light'] .projects-filter.is-active,
+html[data-theme='light'] .projects-showcase__jump {
+	border-color: rgba(227, 151, 111, 0.28);
+	background: linear-gradient(90deg, rgba(255, 246, 238, 0.98), rgba(245, 231, 220, 0.96));
+	box-shadow:
+		0 14px 26px rgba(239, 143, 86, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.68);
+	color: light.$text-main;
+}
+
+html[data-theme='light'] .featured-project__button:hover,
+html[data-theme='light'] .featured-project__button:focus-visible,
+html[data-theme='light'] .projects-showcase__jump:hover,
+html[data-theme='light'] .projects-showcase__jump:focus-visible,
+html[data-theme='light'] .projects-filter:hover,
+html[data-theme='light'] .projects-filter:focus-visible {
+	border-color: rgba(227, 151, 111, 0.38);
+	background: linear-gradient(90deg, rgba(255, 249, 244, 0.98), rgba(248, 236, 227, 0.98));
+}
+
+html[data-theme='light'] .projects-showcase__jump::after {
+	background: linear-gradient(90deg, rgba(255, 204, 154, 0.1), rgba(239, 143, 86, 0.16), rgba(255, 204, 154, 0.1));
+}
+
+html[data-theme='light'] .projects-showcase__jump-icon {
+	background: linear-gradient(180deg, rgba(255, 220, 186, 0.58), rgba(239, 143, 86, 0.22));
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+html[data-theme='light'] .featured-project__visual::before {
+	background: radial-gradient(circle, rgba(244, 154, 91, 0.26) 0%, rgba(244, 154, 91, 0.12) 42%, light.$transparent 74%);
+}
+
+html[data-theme='light'] .featured-project__frame {
+	box-shadow:
+		0 0 0 1px rgba(255, 255, 255, 0.36),
+		0 0 48px rgba(244, 154, 91, 0.14),
+		0 24px 52px rgba(103, 67, 45, 0.18);
+}
+
+html[data-theme='light'] .project-tile {
+	background:
+		linear-gradient(180deg, rgba(255, 251, 247, 0.98), rgba(244, 234, 225, 0.98)),
+		radial-gradient(circle at 80% 18%, rgba(244, 159, 93, 0.12), light.$transparent 28%);
+}
+
+html[data-theme='light'] .project-tile:hover,
+html[data-theme='light'] .project-tile:focus-within {
+	border-color: rgba(227, 151, 111, 0.26);
+	box-shadow:
+		0 22px 42px rgba(103, 67, 45, 0.16),
+		0 0 28px rgba(239, 143, 86, 0.08),
+		inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+html[data-theme='light'] .project-tile__media {
+	background: rgba(238, 224, 214, 0.9);
+}
+
+html[data-theme='light'] .project-tile__media::after {
+	background:
+		linear-gradient(180deg, rgba(255, 255, 255, 0.16), light.$transparent 32%),
+		linear-gradient(180deg, light.$transparent 60%, rgba(255, 246, 239, 0.28));
+}
+
+html[data-theme='light'] .project-tile__arrow {
+	border-color: rgba(214, 152, 121, 0.18);
+	background: rgba(255, 255, 255, 0.42);
+	color: rgba(92, 64, 49, 0.82);
+}
+
+html[data-theme='light'] .project-card {
+	background: linear-gradient(180deg, light.$project-card-start, light.$project-card-end);
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.42),
+		inset 0 0 0 1px rgba(214, 152, 121, 0.1);
+}
+
+html[data-theme='light'] .project-card::before {
+	border-color: rgba(214, 152, 121, 0.14);
+}
+
+html[data-theme='light'] .project-card__number,
+html[data-theme='light'] .project-card__share,
+html[data-theme='light'] .project-card__actions button {
+	color: rgba(102, 72, 57, 0.72);
+}
+
+html[data-theme='light'] .about-section__intro {
+	color: light.$about-intro;
+}
+
+html[data-theme='light'] .about-section__intro span,
+html[data-theme='light'] .about-section__toggle {
+	color: light.$about-intro-accent;
+}
+
+html[data-theme='light'] .about-section__toggle:hover,
+html[data-theme='light'] .about-section__toggle:focus-visible {
+	color: rgba(223, 127, 67, 0.98);
+}
+
+html[data-theme='light'] .about-card {
+	background: linear-gradient(180deg, light.$about-card-bg-start, light.$about-card-bg-end);
+}
+
+html[data-theme='light'] .about-card::before {
+	background:
+		linear-gradient(140deg, light.$about-card-shine, light.$transparent 34%),
+		radial-gradient(circle at 85% 14%, light.$about-card-spotlight, light.$transparent 28%);
+}
+
+html[data-theme='light'] .about-card__icon,
+html[data-theme='light'] .contact-link-card__icon,
+html[data-theme='light'] .contact-social {
+	background: light.$about-icon-bg;
+	box-shadow: inset 0 0 0 1px light.$about-icon-ring;
+	color: light.$about-icon;
+}
+
+html[data-theme='light'] .about-card__tech {
+	border-color: rgba(var(--tech-glow-rgb), 0.24);
+	background:
+		radial-gradient(circle at top, rgba(var(--tech-glow-rgb), 0.18), light.$transparent 68%),
+		linear-gradient(180deg, rgba(255, 249, 244, 0.96), rgba(244, 234, 225, 0.98));
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, 0.74),
+		0 0 0 1px rgba(var(--tech-glow-rgb), 0.06),
+		0 12px 20px rgba(var(--tech-glow-rgb), 0.1);
+}
+
+html[data-theme='light'] .about-card__tech:hover,
+html[data-theme='light'] .about-card__tech:focus-within {
+	border-color: rgba(var(--tech-glow-rgb), 0.34);
+	background:
+		radial-gradient(circle at top, rgba(var(--tech-glow-rgb), 0.24), light.$transparent 70%),
+		linear-gradient(180deg, rgba(255, 252, 248, 0.98), rgba(248, 236, 227, 0.98));
+}
+
+html[data-theme='light'] .about-card--cta {
+	background: linear-gradient(180deg, light.$about-cta-bg-start, light.$about-cta-bg-end);
+}
+
+html[data-theme='light'] .about-card--cta::after {
+	background: radial-gradient(circle, light.$about-cta-glow, light.$transparent 72%);
+}
+
+html[data-theme='light'] .about-portrait__halo--large {
+	background: radial-gradient(circle, light.$portrait-halo-strong, light.$portrait-halo-soft 42%, light.$transparent 72%);
+}
+
+html[data-theme='light'] .about-portrait__halo--small {
+	background: radial-gradient(circle, light.$portrait-halo-small, light.$transparent 74%);
+}
+
+html[data-theme='light'] .about-portrait__frame {
+	border-color: light.$portrait-frame-border;
+	box-shadow:
+		0 0 36px light.$portrait-frame-glow,
+		inset 0 0 0 1px light.$portrait-frame-inner;
+}
+
+html[data-theme='light'] .about-portrait__panel {
+	background: linear-gradient(180deg, light.$portrait-panel-start, light.$portrait-panel-end);
+}
+
+html[data-theme='light'] .about-portrait__panel::before {
+	background: radial-gradient(
+		circle at 50% 42%,
+		light.$portrait-panel-glow-center,
+		light.$portrait-panel-glow-edge 38%,
+		light.$transparent 68%
+	);
+}
+
+html[data-theme='light'] .contact-section::before {
+	background: radial-gradient(circle, rgba(242, 163, 111, 0.16), light.$transparent 70%);
+}
+
+html[data-theme='light'] .contact-link-card {
+	background: linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(246, 236, 227, 0.92));
+}
+
+html[data-theme='light'] .contact-link-card::before {
+	background:
+		linear-gradient(140deg, rgba(255, 255, 255, 0.34), light.$transparent 42%),
+		radial-gradient(circle at 82% 18%, rgba(244, 170, 119, 0.12), light.$transparent 28%);
+}
+
+html[data-theme='light'] .contact-link-card:hover,
+html[data-theme='light'] .contact-link-card:focus-visible,
+html[data-theme='light'] .contact-social:hover,
+html[data-theme='light'] .contact-social:focus-visible {
+	border-color: rgba(226, 156, 112, 0.3);
+	box-shadow:
+		0 18px 30px rgba(103, 67, 45, 0.14),
+		inset 0 1px 0 rgba(255, 255, 255, 0.58);
+}
+
+html[data-theme='light'] .contact-social__icon {
+	filter: none;
+	opacity: 0.76;
+}
+
+html[data-theme='light'] .contact-section__availability {
+	border-color: rgba(214, 152, 121, 0.18);
+	background: linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(245, 231, 220, 0.94));
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+html[data-theme='light'] .contact-section__panel {
+	background: linear-gradient(180deg, rgba(255, 251, 247, 0.98), rgba(244, 234, 225, 0.98));
+}
+
+html[data-theme='light'] .contact-section__panel::before {
+	background: radial-gradient(circle, rgba(241, 152, 95, 0.14), light.$transparent 72%);
+}
+
+html[data-theme='light'] .contact-section__panel::after {
+	border-color: rgba(214, 152, 121, 0.12);
+}
+
+html[data-theme='light'] .site-footer {
+	border-color: rgba(218, 159, 120, 0.18);
+	background: linear-gradient(180deg, rgba(255, 251, 247, 0.96), rgba(246, 236, 227, 0.92));
+	box-shadow:
+		0 20px 44px rgba(103, 67, 45, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.42);
+}
+
+html[data-theme='light'] .site-footer::before {
+	background:
+		linear-gradient(140deg, rgba(255, 255, 255, 0.34), light.$transparent 42%),
+		radial-gradient(circle at 82% 18%, rgba(244, 170, 119, 0.12), light.$transparent 28%);
+}
+
+html[data-theme='light'] .site-footer__copy {
+	color: rgba(64, 40, 29, 0.84);
+}
+
+html[data-theme='light'] .site-footer__meta {
+	color: rgba(104, 74, 59, 0.72);
+}
+
+html[data-theme='light'] .site-footer__code {
+	border-color: rgba(214, 152, 121, 0.18);
+	background: rgba(255, 255, 255, 0.48);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+	color: rgba(92, 64, 49, 0.84);
+}
+
+html[data-theme='light'] .contact-field span {
+	color: rgba(64, 40, 29, 0.86);
+}
+
+html[data-theme='light'] .contact-field input,
+html[data-theme='light'] .contact-field textarea {
+	border-color: rgba(214, 152, 121, 0.18);
+	background: rgba(255, 255, 255, 0.52);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.54);
+	color: light.$text-main;
+}
+
+html[data-theme='light'] .contact-field input::placeholder,
+html[data-theme='light'] .contact-field textarea::placeholder {
+	color: rgba(104, 74, 59, 0.4);
+}
+
+html[data-theme='light'] .contact-field input:focus,
+html[data-theme='light'] .contact-field textarea:focus {
+	border-color: rgba(226, 156, 112, 0.34);
+	background: rgba(255, 255, 255, 0.82);
+	box-shadow:
+		0 0 0 4px rgba(239, 143, 86, 0.12),
+		inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
