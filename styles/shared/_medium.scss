@@ -1,0 +1,13 @@
+@media (max-width: 720px) {
+	:root {
+		--site-header-height: 136px;
+		--site-header-offset: 136px;
+	}
+}
+
+@media (max-width: 540px) {
+	:root {
+		--site-header-height: 128px;
+		--site-header-offset: 128px;
+	}
+}

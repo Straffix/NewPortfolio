@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arladiusz Lisiecki - Oficjalna strona zawierająca moje portfolio front-end." />
+    <meta name="keywords"
+        content="front-end, javascript, html, css, scss, wordpress, bootstrap, arkadiusz lisiecki, lisieckidev">
+    <title>LisieckiDEV | Arkadiusz Lisiecki </title>
+
+    <link rel="icon" href="./img/icons/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/icons/favicon.ico" type="image/x-icon">
+    <link rel="preload" href="./font/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./font/dm-sans-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./styles/css/style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <div class="page-shell__noise"></div>
+
+        <header class="site-header container">
+            <a class="brand" href="#">
+                <img class="brand__logo" src="./img/logo.png" alt="Logo LisieckiDEV">
+                <!-- <span class="brand__letter">Lisiecki</span>
+                <span class="brand__letter brand__letter--accent">DEV.pl</span> -->
+            </a>
+
+            <nav class="site-nav">
+                <a class="site-nav__link site-nav__link--active" href="#home">Home</a>
+                <a class="site-nav__link" href="#projects">Projekty</a>
+                <a class="site-nav__link" href="#about">O mnie</a>
+                <a class="site-nav__link" href="#contact">Kontakt</a>
+            </nav>
+        </header>
+
+        <main id="top">
+
+            <!-- Home Page - Strona główna -->
+            <section class="hero" id="home">
+                <picture class="hero__backdrop" aria-hidden="true">
+                    <source media="(max-width: 720px)" srcset="./img/mockup-mobile.webp" type="image/webp" />
+                    <source media="(max-width: 720px)" srcset="./img/mockup-mobile.png" type="image/png" />
+                    <source srcset="./img/mockup-desktop.webp" type="image/webp" />
+                    <img class="hero__backdrop-image" src="./img/mockup-desktop.png" alt="coffe and keyboard background"
+                        width="1536" height="864" decoding="async" />
+                </picture>
+
+                <div class="hero__inner container">
+
+                    <div class="hero__content">
+
+                        <h1 class="hero__title">
+                            <span>Kreatywnie</span>
+                            <span>Każego</span>
+                            <span class="hero__title-accent">Dnia</span>
+                        </h1>
+
+                        <div class="hero__actions">
+                            <a class="button button--primary" href="#projects">
+                                <span>Projekty</span>
+                                <svg viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M5.5 14.5 14.5 5.5M8 5.5h6.5V12" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                </svg>
+                            </a>
+
+                            <a class="button button--ghost" href="#contact">
+                                <span>Kontakt</span>
+                                <svg viewBox="0 0 20 20" aria-hidden="true">
+                                    <path d="M5.5 14.5 14.5 5.5M8 5.5h6.5V12" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="stats">
+                            <div class="stat">
+
+                                <div class="stat__icon" aria-hidden="true">
+                                    <span class="code__icon"></span>
+                                </div>
+
+
+                                <div class="stat__body">
+                                    <strong>Stack</strong>
+                                    <span>•HTML •CSS •JS •Bootstrap •WP</span>
+                                </div>
+                            </div>
+
+                            <div class="stat stat--calendar">
+                                <div class="stat__icon" aria-hidden="true">
+                                    <span class="calendar__icon"></span>
+                                </div>
+                                <div class="stat__body">
+                                    <strong>In Progress...</strong>
+                                    <span>•React •Vue •TS •NodeJS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero__visual">
+                        <div class="hero-art">
+                            <picture class="hero-art__media">
+                                <source media="(max-width: 720px)"
+                                    srcset="./img/mockup-720.png 720w, ./img/mockup-1024.png 1024w"
+                                    sizes="calc(100vw - 28px)" />
+                                <img class="hero-art__image" src="./img/mockup-1200.png"
+                                    srcset="./img/mockup-960.png 960w, ./img/mockup-1024.png 1024w, ./img/mockup-1200.png 1200w, ./img/mockup.png 1536w"
+                                    sizes="(max-width: 720px) calc(100vw - 28px), (max-width: 900px) 700px, (max-width: 1180px) 820px, 940px"
+                                    width="1200" height="800" decoding="async" fetchpriority="high"
+                                    alt="laptop and phone with html code on the screen " />
+                            </picture>
+
+
+                            <!-- Sekcja widoczna na ekranie laptopa z mockupu -->
+                            <div class="hero-art__screen hero-art__screen--laptop">
+                                <div class="hero-art__screen-inner">
+                                    <div class="hero-code">
+                                        <span class="hero-code__line"><span
+                                                class="token token--purple">&lt;!doctype</span>
+                                            <span class="token token--yellow">html</span><span
+                                                class="token token--purple">&gt;</span></span>
+                                        <span class="hero-code__line"><span class="token token--blue">&lt;</span><span
+                                                class="token token--red">html</span> <span
+                                                class="token token--green">lang</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"pl"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">head</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">meta</span> <span
+                                                class="token token--green">charset</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"UTF-8"</span> <span
+                                                class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">meta</span> <span
+                                                class="token token--green">name</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"viewport"</span></span>
+                                        <span class="hero-code__line"> <span
+                                                class="token token--green">content</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"width=device-width"</span>
+                                            <span class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">title</span><span
+                                                class="token token--blue">&gt;</span><span
+                                                class="token token--white">Arkadiusz.dev</span><span
+                                                class="token token--blue">&lt;/</span><span
+                                                class="token token--red">title</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">link</span> <span
+                                                class="token token--green">rel</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"stylesheet"</span></span>
+                                        <span class="hero-code__line"> <span class="token token--green">href</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"./styles.css"</span> <span
+                                                class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">head</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">body</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">div</span> <span
+                                                class="token token--green">class</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"page-shell"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">header</span> <span
+                                                class="token token--green">class</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"site-header"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">header</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">div</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">body</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"><span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">html</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sekcja widoczna na ekranie telefonu z mockupu -->
+                            <div class="hero-art__screen hero-art__screen--phone">
+                                <div class="hero-art__screen-inner hero-art__screen-inner--phone">
+                                    <div class="hero-code hero-code--phone">
+                                        <span class="hero-code__line"><span
+                                                class="token token--purple">&lt;!doctype</span>
+                                            <span class="token token--yellow">html</span><span
+                                                class="token token--purple">&gt;</span></span>
+                                        <span class="hero-code__line"><span class="token token--blue">&lt;</span><span
+                                                class="token token--red">html</span> <span
+                                                class="token token--green">lang</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"pl"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">head</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">meta</span> <span
+                                                class="token token--green">charset</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"UTF-8"</span> <span
+                                                class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">meta</span> <span
+                                                class="token token--green">name</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"viewport"</span></span>
+                                        <span class="hero-code__line"> <span
+                                                class="token token--green">content</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"width=device-width"</span>
+                                            <span class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">title</span><span
+                                                class="token token--blue">&gt;</span><span
+                                                class="token token--white">Arkadiusz.dev</span><span
+                                                class="token token--blue">&lt;/</span><span
+                                                class="token token--red">title</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">link</span> <span
+                                                class="token token--green">rel</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"stylesheet"</span></span>
+                                        <span class="hero-code__line"> <span class="token token--green">href</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"./styles.css"</span> <span
+                                                class="token token--blue">/&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">head</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">body</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">div</span> <span
+                                                class="token token--green">class</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"page-shell"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;</span><span
+                                                class="token token--red">header</span> <span
+                                                class="token token--green">class</span><span
+                                                class="token token--white">=</span><span
+                                                class="token token--orange">"site-header"</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">header</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">div</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"> <span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">body</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                        <span class="hero-code__line"><span class="token token--blue">&lt;/</span><span
+                                                class="token token--red">html</span><span
+                                                class="token token--blue">&gt;</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projects-showcase container" id="projects">
+                <div class="projects-showcase__panel projects-showcase__panel--gallery">
+                    <div class="projects-showcase__header">
+                        <span class="projects-showcase__eyebrow">Projekty</span>
+                        <h2 class="projects-showcase__title">Wybrane prace</h2>
+                        <p class="projects-showcase__lead">
+                            To wybrane realizacje, w których łączę estetykę, funkcjonalność i dbałość o detal, tworząc
+                            nowoczesne i czytelne doświadczenia.
+                        </p>
+                    </div>
+
+                    <div class="projects-gallery" id="projects-gallery">
+                        <article class="portfolio-card portfolio-card--hero portfolio-card--dashboard"
+                            data-reveal-index="0">
+                            <span class="visually-hidden">Najnowszy projekt</span>
+                            <img class="portfolio-card__image" src="./img/site/dashboard/main.jpeg" width="1280"
+                                height="610" loading="lazy" decoding="async"
+                                alt="Podglad projektu IT Management Dashboard" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">IT Management Dashboard</h3>
+                                <p class="portfolio-card__excerpt">
+                                    System do organizacji procesow i codziennej pracy zespole Rossmann.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-dashboard-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-dashboard-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">IT Management Dashboard</h3>
+                                            <p class="portfolio-card__description">
+                                                Rozbudowany dashboard zaprojektowany z mysla o szybkiej pracy na danych,
+                                                porzadkowaniu procesow i czytelnym zarzadzaniu codziennymi zadaniami.
+                                            </p>
+                                            <ul class="portfolio-card__tags"
+                                                aria-label="Technologie projektu IT Management Dashboard">
+                                                <li>HTML</li>
+                                                <li>CSS / SASS</li>
+                                                <li>JS</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <a class="portfolio-card__action" href="./DashboardIT/"
+                                                    target="_blank" rel="noreferrer">Demo</a>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/dashboard/main.jpeg"
+                                                alt="IT Management Dashboard - ekran główny projektu" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/dashboard/screen-1.jpeg"
+                                                alt="IT Management Dashboard - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/dashboard/screen-2.jpeg"
+                                                alt="IT Management Dashboard - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-card portfolio-card--showfm" data-reveal-index="1">
+                            <img class="portfolio-card__image" src="./img/site/showfm/main.jpeg" width="960"
+                                height="455" loading="lazy" decoding="async"
+                                alt="Podglad projektu ShowFM Music Platform" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">ShowFM</h3>
+                                <p class="portfolio-card__excerpt">
+                                    Neonowy koncept radia internetowego z bardziej immersyjnym klimatem.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-showfm-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-showfm-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">ShowFM</h3>
+                                            <p class="portfolio-card__description">
+                                                Koncept strony promujacej muzyke i radio online, z mocniejszym swiatlem,
+                                                kontrastem i warstwowa kompozycja typowa dla nowoczesnych hero section.
+                                            </p>
+                                            <ul class="portfolio-card__tags" aria-label="Technologie projektu ShowFM">
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <button class="portfolio-card__action portfolio-card__action--disabled"
+                                                    type="button" disabled>Demo</button>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/showfm/main.jpeg"
+                                                alt="ShowFM Music Platform - ekran glowny projektu" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/showfm/screen-1.jpeg"
+                                                alt="ShowFM Music Platform - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/showfm/screen-2.jpeg"
+                                                alt="ShowFM Music Platform - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-card portfolio-card--tropical" data-reveal-index="2">
+                            <img class="portfolio-card__image" src="./img/site/tropical-paradise/main.jpeg" width="960"
+                                height="460" loading="lazy" decoding="async"
+                                alt="Podglad projektu Tropical Paradise Landing Page" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">Tropical Paradise</h3>
+                                <p class="portfolio-card__excerpt">
+                                    Premium landing page dla marki travel &amp; hospitality.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-tropical-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-tropical-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">Tropical Paradise</h3>
+                                            <p class="portfolio-card__description">
+                                                Strona skupiona na lekkim, wakacyjnym klimacie z duza ekspozycja zdjec,
+                                                przejrzystym CTA i bardziej elegancka prezentacja oferty.
+                                            </p>
+                                            <ul class="portfolio-card__tags"
+                                                aria-label="Technologie projektu Tropical Paradise">
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JS</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <button class="portfolio-card__action portfolio-card__action--disabled"
+                                                    type="button" disabled>Demo</button>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/tropical-paradise/main.jpeg"
+                                                alt="Tropical Paradise - ekran glowny projektu" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/tropical-paradise/screen-1.jpeg"
+                                                alt="Tropical Paradise - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/tropical-paradise/screen-2.jpeg"
+                                                alt="Tropical Paradise - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-card portfolio-card--dgm" data-reveal-index="3">
+                            <img class="portfolio-card__image" src="./img/site/dgm-company/main.jpeg" width="960"
+                                height="459" loading="lazy" decoding="async"
+                                alt="Podglad projektu DGM Company Website" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">DGM Company</h3>
+                                <p class="portfolio-card__excerpt">
+                                    Strona firmowa z mocniejszym brandingiem i ciemniejszym klimatem.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-dgm-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-dgm-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">DGM Company</h3>
+                                            <p class="portfolio-card__description">
+                                                Projekt strony firmowej osadzonej w ciemniejszej identyfikacji, gdzie
+                                                typografia, kontrast i uporzadkowanie sekcji buduja bardziej premium
+                                                odbior.
+                                            </p>
+                                            <ul class="portfolio-card__tags"
+                                                aria-label="Technologie projektu DGM Company">
+                                                <li>WordPress</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <button class="portfolio-card__action portfolio-card__action--disabled"
+                                                    type="button" disabled>Demo</button>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/dgm-company/main.jpeg"
+                                                alt="DGM Company - ekran glowny projektu" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/dgm-company/screen-1.jpeg"
+                                                alt="DGM Company - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/dgm-company/screen-2.jpeg"
+                                                alt="DGM Company - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-card portfolio-card--folk" data-reveal-index="4">
+                            <img class="portfolio-card__image" src="./img/site/folkshop/main.jpeg" width="960"
+                                height="458" loading="lazy" decoding="async"
+                                alt="Podglad projektu FolkShop eCommerce" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">FolkShop eCommerce</h3>
+                                <p class="portfolio-card__excerpt">
+                                    Sklepowy koncept inspirowany folklorem i modularnym layoutem.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-folk-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-folk-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">FolkShop eCommerce</h3>
+                                            <p class="portfolio-card__description">
+                                                Koncept sklepu internetowego z cieplejsza identyfikacja, modularna
+                                                siatka
+                                                produktow i bardziej editorialowym sposobem prowadzenia wzroku.
+                                            </p>
+                                            <ul class="portfolio-card__tags" aria-label="Technologie projektu FolkShop">
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JS</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <button class="portfolio-card__action portfolio-card__action--disabled"
+                                                    type="button" disabled>Demo</button>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/folkshop/main.jpeg"
+                                                alt="FolkShop eCommerce - ekran glowny projektu" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/folkshop/screen-1.jpeg"
+                                                alt="FolkShop eCommerce - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/folkshop/screen-2.jpeg"
+                                                alt="FolkShop eCommerce - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="portfolio-card portfolio-card--archive" data-reveal-index="5">
+                            <img class="portfolio-card__image" src="./img/site/resume/main.jpeg" width="960"
+                                height="459" loading="lazy" decoding="async" alt="Podglad projektu Resume" />
+                            <div class="portfolio-card__content">
+                                <h3 class="portfolio-card__title">Resume</h3>
+                                <p class="portfolio-card__excerpt">
+                                    CV online z naciskiem na czytelny profil, linki i szybki kontakt.
+                                </p>
+                                <button class="portfolio-card__trigger" type="button" aria-expanded="false"
+                                    aria-controls="project-archive-details">
+                                    Szczegóły
+                                </button>
+                            </div>
+
+                            <div class="portfolio-card__overlay" id="project-archive-details" aria-hidden="true">
+                                <div class="portfolio-card__overlay-inner">
+                                    <div class="portfolio-card__overlay-layout">
+                                        <div class="portfolio-card__overlay-copy">
+                                            <h3 class="portfolio-card__overlay-title">Resume</h3>
+                                            <p class="portfolio-card__description">
+                                                CV online zaprojektowane tak, zeby szybko pokazac sylwetke, linki,
+                                                najwazniejsze informacje i bardziej osobisty charakter prezentacji.
+                                            </p>
+                                            <ul class="portfolio-card__tags" aria-label="Technologie projektu Resume">
+                                                <li>HTML</li>
+                                                <li>CSS</li>
+                                                <li>JavaScript</li>
+                                            </ul>
+                                            <div class="portfolio-card__actions">
+                                                <button class="portfolio-card__action portfolio-card__action--disabled"
+                                                    type="button" disabled>Demo</button>
+                                                <a class="portfolio-card__action" href="https://github.com/Straffix"
+                                                    target="_blank" rel="noreferrer">GitHub</a>
+                                            </div>
+                                        </div>
+                                        <div class="portfolio-card__gallery" aria-hidden="true">
+                                            <img class="portfolio-card__gallery-item portfolio-card__gallery-item--primary"
+                                                src="./img/site/resume/main.jpeg" alt="Resume - ekran glowny projektu"
+                                                loading="lazy" decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/resume/screen-1.jpeg"
+                                                alt="Resume - zrzut ekranu interfejsu 1" loading="lazy"
+                                                decoding="async" />
+                                            <img class="portfolio-card__gallery-item"
+                                                src="./img/site/resume/screen-2.jpeg"
+                                                alt="Resume - zrzut ekranu interfejsu 2" loading="lazy"
+                                                decoding="async" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About ME - Sekcja O MNIE -->
+
+            <section class="about-section container" id="about">
+                <div class="about-section__content">
+                    <h2 class="about-section__title">
+                        <span class="about-section__title-accent">O</span> mnie
+                    </h2>
+
+                    <p class="about-section__intro">
+                        Cześć! Nazywam się <span>Arkadiusz Lisiecki.</span>
+                    </p>
+
+                    <p class="about-section__lead">
+                        Tworzę nowoczesne strony internetowe, stawiając na minimalizm, czytelny układ i dobrze
+                        przemyślane detale. Lubię proste rozwiązania, bo wierzę, że właśnie w prostocie najczęściej
+                        kryje się najlepszy efekt.
+                    </p>
+
+                    <button class="about-section__toggle" type="button" aria-expanded="false"
+                        aria-controls="about-section-more">
+                        <span class="about-section__toggle-label">Czytaj więcej</span>
+                        <svg viewBox="0 0 20 20" aria-hidden="true">
+                            <path d="M5.5 7.5 10 12l4.5-4.5" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+                        </svg>
+                    </button>
+
+                    <div class="about-section__more" id="about-section-more" hidden>
+                        <p class="about-section__lead">
+                            Łączę frontend z doświadczeniem grafika komputerowego, dlatego Photoshop i Illustrator są
+                            dla mnie naturalnym środowiskiem pracy. To połączenie designu i kodu daje mi dużą swobodę:
+                            mogę myśleć o stronie jednocześnie pod kątem estetyki, użyteczności i technicznego
+                            wykonania.
+                        </p>
+
+                        <p class="about-section__lead">
+                            W codziennej pracy coraz częściej korzystam też z AI. Pomaga mi szybciej tworzyć strony i
+                            rozwijać pomysły, ale używam go również kreatywnie: do generowania obrazów, eksperymentów
+                            muzycznych i szukania nowych kierunków wizualnych. Traktuję AI jako narzędzie, które
+                            przyspiesza proces, ale nie zastępuje własnego stylu i decyzji.
+                        </p>
+
+                        <p class="about-section__lead">
+                            Obecnie chcę rozwijać się dalej w stronę Reacta, TypeScriptu, Vue oraz backendu opartego na
+                            Node.js i podobnych technologiach. Zależy mi na tym, żeby coraz lepiej rozumieć cały proces
+                            tworzenia aplikacji i budować jeszcze pełniejsze, bardziej dopracowane projekty.
+                        </p>
+                    </div>
+
+                    <div class="about-grid">
+
+                        <!-- Karta umiejętności -->
+                        <article class="about-card">
+                            <div class="about-card__header">
+                                <div class="about-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 4 5 7.5 12 11l7-3.5L12 4Z M5 12l7 3.5 7-3.5M5 16.5 12 20l7-3.5"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.7" />
+                                    </svg>
+                                </div>
+                                <h3 class="about-card__title">Umiejętności</h3>
+                            </div>
+                            <ul class="about-card__tech-list"
+                                aria-label="Technologie: HTML5, CSS3, JavaScript, Sass, Figma, Bootstrap, WordPress, AI, Adobe Photoshop, Adobe Illustrator i Adobe After Effects">
+                                <li class="about-card__tech about-card__tech--html" title="HTML5">
+                                    <span class="visually-hidden">HTML5</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--css" title="CSS3">
+                                    <span class="visually-hidden">CSS3</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--javascript" title="JavaScript">
+                                    <span class="visually-hidden">JavaScript</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--sass" title="Sass">
+                                    <span class="visually-hidden">Sass</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--figma" title="Figma">
+                                    <span class="visually-hidden">Figma</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--bootstrap" title="Bootstrap">
+                                    <span class="visually-hidden">Bootstrap</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--wordpress" title="WordPress">
+                                    <span class="visually-hidden">WordPress</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--ai" title="AI">
+                                    <span class="visually-hidden">AI</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--photoshop" title="Adobe Photoshop">
+                                    <span class="visually-hidden">Adobe Photoshop</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--illustrator" title="Adobe Illustrator">
+                                    <span class="visually-hidden">Adobe Illustrator</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--aftereffects" title="Adobe After Effects">
+                                    <span class="visually-hidden">Adobe After Effects</span>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <!-- Karta "Po godzinach" -->
+                        <article class="about-card">
+                            <div class="about-card__header">
+                                <div class="about-card__icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 20.25s-6.5-4.1-8.1-8.25A4.85 4.85 0 0 1 8.55 5.5c1.45 0 2.82.64 3.75 1.74A4.92 4.92 0 0 1 16.05 5.5a4.85 4.85 0 0 1 4.65 6.5C19.1 16.15 12.6 20.25 12 20.25Z"
+                                            fill="none" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="1.7" />
+                                    </svg>
+                                </div>
+                                <h3 class="about-card__title">Po godzinach</h3>
+                            </div>
+                            <ul class="about-card__tech-list about-card__tech-list--hobby"
+                                aria-label="Po godzinach: kod, gitara, pływanie, rower i podróże">
+                                <li class="about-card__tech about-card__tech--hobby-code" title="Kod">
+                                    <span class="visually-hidden">Kod</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--hobby-guitar" title="Gitara">
+                                    <span class="visually-hidden">Gitara</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--hobby-swim" title="Pływanie">
+                                    <span class="visually-hidden">Pływanie</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--hobby-bike" title="Rower">
+                                    <span class="visually-hidden">Rower</span>
+                                </li>
+                                <li class="about-card__tech about-card__tech--hobby-travel" title="Podróże">
+                                    <span class="visually-hidden">Podróże</span>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- Sekcja Kontakt -->
+
+                <div class="about-section__visual">
+                    <div class="about-portrait">
+                        <div class="about-portrait__panel">
+                            <img class="about-portrait__image" src="./img/me.png" width="853" height="1280"
+                                loading="lazy" decoding="async" alt="Portrait of Arkadiusz Lisiecki" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact-section container" id="contact">
+                <div class="contact-section__copy">
+                    <p class="contact-section__eyebrow">Kontakt</p>
+
+                    <h2 class="contact-section__title">
+                        <span class="contact-section__title-accent">Porozmawiaj</span>my!
+                    </h2>
+
+                    <div class="contact-links">
+                        <a class="contact-link-card" href="mailto:kontakt@lisiecki.dev.pl">
+                            <span class="contact-link-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M4.75 7.75h14.5v8.5H4.75zM5 8l7 5 7-5" fill="none" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" />
+                                </svg>
+                            </span>
+                            <span class="contact-link-card__content">
+                                <strong>Email</strong>
+                                <span>kontakt@lisieckidev.pl</span>
+                            </span>
+                        </a>
+
+                        <a class="contact-link-card" href="tel:+48123456789">
+                            <span class="contact-link-card__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path
+                                        d="M7.5 4.75h2.25l1.1 3.95-1.7 1.65a13.2 13.2 0 0 0 4.5 4.5l1.65-1.7 3.95 1.1v2.25a1.75 1.75 0 0 1-1.75 1.75A13.75 13.75 0 0 1 3.75 6.5 1.75 1.75 0 0 1 5.5 4.75Z"
+                                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1.7" />
+                                </svg>
+                            </span>
+                            <span class="contact-link-card__content">
+                                <strong>Telefon</strong>
+                                <span>+48 791 947 493</span>
+                            </span>
+                        </a>
+
+                        <div class="contact-link-card contact-link-card--static contact-link-card--social"
+                            aria-label="Social media i kontakt mailowy">
+                            <div class="contact-socials">
+                                <a class="contact-social" href="https://www.instagram.com/arkadiusz.el/"
+                                    target="_blank" rel="noreferrer" aria-label="Instagram">
+                                    <img class="contact-social__icon" src="./img/icons/instagram-brands-solid-full.svg"
+                                        alt="" aria-hidden="true" />
+                                    <span class="visually-hidden">Instagram</span>
+                                </a>
+
+                                <a class="contact-social" href="https://www.facebook.com/lisiecki.arkadiusz"
+                                    target="_blank" rel="noreferrer" aria-label="Facebook">
+                                    <img class="contact-social__icon" src="./img/icons/facebook-f-brands-solid-full.svg"
+                                        alt="" aria-hidden="true" />
+                                    <span class="visually-hidden">Facebook</span>
+                                </a>
+
+                                <a class="contact-social" href="https://github.com/Straffix" target="_blank"
+                                    rel="noreferrer" aria-label="GitHub">
+                                    <img class="contact-social__icon" src="./img/icons/github-brands-solid-full.svg"
+                                        alt="" aria-hidden="true" />
+                                    <span class="visually-hidden">GitHub</span>
+                                </a>
+
+                                <a class="contact-social" href="https://x.com/lisiecki_dev" target="_blank"
+                                    rel="noreferrer" aria-label="X">
+                                    <img class="contact-social__icon" src="./img/icons/x-twitter-brands-solid-full.svg"
+                                        alt="" aria-hidden="true" />
+                                    <span class="visually-hidden">X</span>
+                                </a>
+
+                                <a class="contact-social" href="mailto:kontakt@lisieckidev.pl"
+                                    aria-label="Wyślij wiadomość email">
+                                    <img class="contact-social__icon" src="./img/icons/envelope-solid-full.svg" alt=""
+                                        aria-hidden="true" />
+                                    <span class="visually-hidden">Email</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="contact-section__availability">
+                        <span class="contact-section__availability-dot" aria-hidden="true"></span>
+                        Zazwyczaj odpisuję w ciągu 24h
+                    </p>
+                </div>
+
+                <div class="contact-section__panel">
+                    <form class="contact-form" action="#" method="post">
+                        <div class="contact-form__row">
+                            <label class="contact-field">
+                                <span>Imię / Nazwa Firmy</span>
+                                <input type="text" name="name" placeholder="Twoje imię lub nazwa firmy" />
+                            </label>
+
+                            <label class="contact-field">
+                                <span>Email</span>
+                                <input type="email" name="email" placeholder="twój@email.pl" />
+                            </label>
+                        </div>
+
+                        <label class="contact-field">
+                            <span>Temat</span>
+                            <input type="text" name="subject" placeholder="W czym mogę pomóc?" />
+                        </label>
+
+                        <label class="contact-field">
+                            <span>Wiadomość</span>
+                            <textarea name="message" placeholder="Opisz swój projekt lub pomysł..."></textarea>
+                        </label>
+
+                        <button class="button button--primary contact-form__submit" type="submit">
+                            <span>Wyślij wiadomość</span>
+                            <svg viewBox="0 0 20 20" aria-hidden="true">
+                                <path d="M5.5 14.5 14.5 5.5M8 5.5h6.5V12" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" />
+                            </svg>
+                        </button>
+
+                        <p class="contact-form__feedback" aria-live="polite"></p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="scroll-indicator__mouse">
+                <span></span>
+            </div>
+            <span>Przewiń w dół</span>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
